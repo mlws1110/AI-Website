@@ -1,0 +1,10 @@
+{
+    "GPT-4": "https://openai.com/gpt-4",
+    "TensorFlow": "https://www.tensorflow.org/",
+    "PyTorch": "https://pytorch.org/",
+    "Hugging Face": "https://huggingface.co/",
+    "Scikit-learn": "https://scikit-learn.org/",
+    "Keras": "https://keras.io/",
+    "Another Tool": "https://example.com/another-tool"
+    
+}

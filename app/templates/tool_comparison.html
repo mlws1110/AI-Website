@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Tool Comparison - AI News Website{% endblock %}
+
+{% block content %}
+    <h1>AI Tool Comparison</h1>
+    {% if tools %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool Name</th>
+                    <th>Category</th>
+                    <th>Features</th>
+                    <th>Pricing</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for tool in tools %}
+                <tr>
+                    <td>{{ tool.name }}</td>
+                    <td>{{ tool.category }}</td>
+                    <td>{{ tool.features }}</td>
+                    <td>{{ tool.pricing }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No tools selected for comparison.</p>
+    {% endif %}
+{% endblock %}

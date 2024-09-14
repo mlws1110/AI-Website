@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}AI News - Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to AI News</h1>
+    <p>Stay up-to-date with the latest developments in artificial intelligence.</p>
+    
+    <section>
+        <h2>Latest News</h2>
+        <img src="{{ url_for('static', filename='images/latest_news.jpg') }}" alt="Latest News" class="section-image">
+        <!-- Add news highlights here -->
+        <a href="{{ url_for('news.index') }}" class="button">Read More</a>
+    </section>
+
+    <section>
+        <h2>Featured Tools</h2>
+        <img src="{{ url_for('static', filename='images/featured_tools.jpg') }}" alt="Featured Tools" class="section-image">
+        <!-- Add featured AI tools here -->
+        <a href="{{ url_for('tools.index') }}" class="button">Explore Tools</a>
+    </section>
+
+    <section>
+        <h2>AI Modalities</h2>
+        <img src="{{ url_for('static', filename='images/ai_modalities.jpg') }}" alt="AI Modalities" class="section-image">
+        <!-- Add links to different AI modalities here -->
+        <a href="{{ url_for('modalities.index') }}" class="button">View Modalities</a>
+    <section>
+        <h2>The AI Boom</h2>
+        <img src="{{ url_for('static', filename='images/ai_boom.webp') }}" alt="The AI Boom" class="section-image">
+        <p>Explore how the current AI boom resembles the internet boom and its potential impact on society.</p>
+        <!-- Add more content about the AI boom here -->
+        <a href="{{ url_for('main.ai_boom') }}" class="button">Learn More</a>
+    </section>
+
+    <section>
+        <h2>Robotics and Scientific Research</h2>
+        <img src="{{ url_for('static', filename='images/robotics_research.jpeg') }}" alt="Robotics Research" class="section-image">
+        <p>Discover the latest advancements in robotics and the heavy scientific research propelling the AI industry forward.</p>
+        <ul>
+            <li><a href="{{ url_for('news.index') }}">Latest in Robotics</a></li>
+            <li><a href="{{ url_for('tools.index') }}">AI Research Tools</a></li>
+            <li><a href="{{ url_for('news.index') }}">Scientific Breakthroughs</a></li>
+        </ul>
+        <a href="{{ url_for('news.index') }}" class="button">Explore Research</a>
+    </section>
+{% endblock %}

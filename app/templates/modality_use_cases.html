@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ modality }} Use Cases - AI News Website{% endblock %}
+
+{% block content %}
+    <h1>{{ modality }} Use Cases</h1>
+    {% if use_cases %}
+        <ul>
+        {% for use_case in use_cases %}
+            <li>
+                <h2>{{ use_case.title }}</h2>
+                <p>{{ use_case.description }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No use cases found for this modality.</p>
+    {% endif %}
+{% endblock %}

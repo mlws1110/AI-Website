@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}AI Tools - AI News Website{% endblock %}
+
+{% block content %}
+    <h1>AI Tools</h1>
+    {% if tools %}
+        {% for category in tools|groupby('category') %}
+            <h2>{{ category.grouper }}</h2>
+            <div class="tool-category">
+                {% for tool in category.list %}
+                    <div class="tool-card">
+                        <h3><a href="{{ url_for('tools.tool', tool_id=tool.id) }}">{{ tool.name }}</a></h3>
+                        <p>{{ tool.features }}</p>
+                        {% if tool.website %}
+                            <p><a href="{{ tool.website }}" target="_blank" class="button">Visit Website</a></p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No AI tools available at the moment.</p>
+    {% endif %}
+    
+    <!-- LLMS Section -->
+    <section>
+        <h2>All Available LLMS</h2>
+        <p>Explore our comprehensive list of Large Language Models (LLMS) that are driving the forefront of AI research and applications.</p>
+        <div class="tool-category">
+            {% for llm in llms %}
+                <div class="tool-card">
+                    <h3><a href="{{ url_for('tools.tool', tool_id=llm.id) }}">{{ llm.name }}</a></h3>
+                    <p>{{ llm.features }}</p>
+                    {% if llm.website %}
+                        <p><a href="{{ llm.website }}" target="_blank" class="button">Visit Website</a></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('tools.index') }}" class="button">View All LLMS</a>
+    </section>
+{% endblock %}

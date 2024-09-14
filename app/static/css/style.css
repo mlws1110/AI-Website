@@ -1,0 +1,245 @@
+/* Add your custom styles here */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-footer-bg);
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Section Images */
+.section-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+}
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--header-footer-bg);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+footer ul li {
+    margin: 0 0.5rem;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Modern Color Palette */
+:root {
+    --primary-color: #4CAF50; /* Accent color */
+    --secondary-color: #f4f4f4; /* Light background */
+    --text-color: #333;
+    --header-footer-bg: #222;
+    --link-color: #4CAF50;
+    --link-hover-color: #45a049;
+}
+
+/* Buttons */
+button, .button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none; /* Ensure buttons look like buttons */
+    display: inline-block; /* Align properly */
+}
+
+button:hover, .button:hover {
+    background-color: #45a049;
+}
+
+/* Section Buttons */
+section .button {
+    margin-top: 1rem;
+}
+
+/* Navigation Toggle Button */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    /* Responsive Navigation */
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+}
+
+/* Tool Detail Page */
+.tool-details {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.tool-details p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Website Links */
+.tool-details a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tool-details a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Tool Categories */
+.tool-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Tool Card */
+.tool-card {
+    background: #fafafa;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(33.333% - 2rem);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tool-card h3 {
+    margin-top: 0;
+}
+
+.tool-card .button {
+    margin-top: 0.5rem;
+}
+
+/* Responsive Cards */
+@media (max-width: 992px) {
+    .tool-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .tool-card {
+        width: 100%;
+    }
+}

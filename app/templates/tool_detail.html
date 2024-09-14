@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ tool.name }} - AI News Website{% endblock %}
+
+{% block content %}
+    <h1>{{ tool.name }}</h1>
+    <!-- Removed the image display as per previous instructions -->
+    <!-- Add detailed information about the tool -->
+    <div class="tool-details">
+        <p><strong>Category:</strong> {{ tool.category }}</p>
+        <p><strong>Features:</strong> {{ tool.features }}</p>
+        <p><strong>Pricing:</strong> {{ tool.pricing }}</p>
+        {% if tool.website %}
+            <p><strong>Website:</strong> <a href="{{ tool.website }}" target="_blank">{{ tool.website }}</a></p>
+        {% endif %}
+    </div>
+{% endblock %}

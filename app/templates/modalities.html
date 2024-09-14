@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}AI Modalities - AI News Website{% endblock %}
+
+{% block content %}
+    <h1>AI Modalities</h1>
+    {% if modalities %}
+        <ul>
+        {% for modality in modalities %}
+            <li><a href="{{ url_for('modalities.modality', modality=modality.name) }}">{{ modality.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No AI modalities available at the moment.</p>
+    {% endif %}
+{% endblock %}
